@@ -27,7 +27,6 @@ jobs:
           libgbm1 \
           libasound2t64 \
           libxss1 \
-          libappindicator1 \
           libxcomposite1 \
           libxdamage1 \
           libxrandr2 \
