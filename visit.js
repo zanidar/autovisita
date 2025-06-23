@@ -8,13 +8,13 @@ const puppeteer = require("puppeteer");
     });
 
     const page = await browser.newPage();
-    const url = "https://telegram-bot-cron.onrender.com"; // 🔁 reemplaza con tu URL
+    const url = "https://telegram-bot-cron.onrender.com";
 
     console.log(`🌐 Visitando: ${url}`);
     await page.goto(url, { waitUntil: "networkidle2", timeout: 30000 });
 
     console.log("⏳ Esperando 20 segundos para asegurar carga completa...");
-    await page.waitForTimeout(20000); // Espera 20 segundos (20,000 ms)
+    await new Promise(resolve => setTimeout(resolve, 20000));
 
     console.log("✅ Visita completada.");
     await browser.close();
